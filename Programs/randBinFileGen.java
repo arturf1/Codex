@@ -3,9 +3,9 @@
  * Date: 2/28/2015
  * Version: 1.0
  * 
+ * Description: A class for generating pseudorandom binary files.
  * Compilation: javac randBinFileGen.java
  * Execution: java randBinFileGen 100 > randFile
- * Description: A class for generating pseudorandom binary files.
  *
  * License: The MIT License (MIT) Copyright (c) 2015
  **********************************************************************/
