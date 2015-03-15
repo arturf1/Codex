@@ -49,7 +49,7 @@ function moveMap(){
     setTimeout("moveMap()",100);
 }
 
-// Move the map along latitude lat 0.4 degrees every 100 ms. 
+// Move the map to a location and zoom in. 
 function gotoLocation(){
 	map.panTo(new google.maps.LatLng(lLat,lLng));
 	if (map.getZoom() !== 10)
