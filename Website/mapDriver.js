@@ -5,6 +5,7 @@
 // 
 // Description: Javascript functions for moving and zooming into a google map.
 // Execution: See background map on http://www.techtelligent.net/MastermindMedia/
+// Requires <script src="http://maps.google.com/maps/api/js?sensor=true"></script>
 //
 // License: The MIT License (MIT) Copyright (c) 2015
  
