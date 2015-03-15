@@ -91,3 +91,24 @@ function zoomOut(){
 	map.setZoom(map.getZoom() - 1);
 	setTimeout("returnToEquator()",1000);
 }
+
+// Add marker in a random location.
+function placeRandMarker(){
+  var lt = (Math.random()*19)*10;
+  var lg = (Math.random()*19)*10;
+  var neg = Math.floor(Math.random()*2);
+  if ( neg == 1)
+  {
+    lg = 0 - lg;
+  }
+  neg = Math.floor(Math.random()*2);
+  if ( neg == 1)
+  {
+    lt = 0 - lt;
+  }
+  new google.maps.Marker({
+  	position: new google.maps.LatLng(lt,lg),
+  	map: map
+  })
+  setTimeout("placeRandMarker()",10);
+}
