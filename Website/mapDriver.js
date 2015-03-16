@@ -5,6 +5,7 @@
 // 
 // Description: Javascript functions for moving and zooming into a google map.
 // Execution: See background map on http://www.techtelligent.net/MastermindMedia/
+// Requires <script src="http://maps.google.com/maps/api/js?sensor=true"></script>
 //
 // License: The MIT License (MIT) Copyright (c) 2015
  
@@ -49,7 +50,7 @@ function moveMap(){
     setTimeout("moveMap()",100);
 }
 
-// Move the map along latitude lat 0.4 degrees every 100 ms. 
+// Move the map to a location and zoom in. 
 function gotoLocation(){
 	map.panTo(new google.maps.LatLng(lLat,lLng));
 	if (map.getZoom() !== 10)
@@ -89,4 +90,25 @@ function returnToEquator(){
 function zoomOut(){
 	map.setZoom(map.getZoom() - 1);
 	setTimeout("returnToEquator()",1000);
+}
+
+// Add marker in a random location.
+function placeRandMarker(){
+  var lt = (Math.random()*19)*10;
+  var lg = (Math.random()*19)*10;
+  var neg = Math.floor(Math.random()*2);
+  if ( neg == 1)
+  {
+    lg = 0 - lg;
+  }
+  neg = Math.floor(Math.random()*2);
+  if ( neg == 1)
+  {
+    lt = 0 - lt;
+  }
+  new google.maps.Marker({
+  	position: new google.maps.LatLng(lt,lg),
+  	map: map
+  })
+  setTimeout("placeRandMarker()",10);
 }
