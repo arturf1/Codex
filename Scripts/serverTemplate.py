@@ -22,7 +22,7 @@ def main():
   HOST = '' #  localhost
   PORT = 50007
 
-  # second arguement can be a port number
+  # second argument can be a port number
   if len(sys.argv) == 2:
     PORT = int(sys.argv[1])
 
