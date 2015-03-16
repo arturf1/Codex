@@ -5,7 +5,7 @@
 #
 # Execution: python serverTemplate.py portNumber
 # Description: Template for a multithreated python serve. 
-# works with Python 2.7
+# Works with Python 2.7
 #
 # License: The MIT License (MIT) Copyright (c) 2015
 ########################################################################
@@ -19,7 +19,7 @@ class SingleTCPHandler(SimpleHTTPServer.SimpleHTTPRequestHandler):
     self.wfile.write("query was %s\n" % self.path)
 
 def main():
-  HOST = '' # localhost
+  HOST = '' #  localhost
   PORT = 50007
 
   # second arguement can be a port number
